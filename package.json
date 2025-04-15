@@ -24,6 +24,7 @@
     "@angular/ssr": "^19.2.0",
     "@coreui/angular": "^5.4.8",
     "@coreui/coreui": "^5.2.0",
+    "@coreui/icons-angular": "^5.4.8",
     "@eslint/eslintrc": "^3.3.0",
     "@fortawesome/angular-fontawesome": "^1.0.0",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
