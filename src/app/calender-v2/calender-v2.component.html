@@ -1,0 +1,43 @@
+<div class="w-full bg-white shadow-lg overflow-hidden font-sans">
+  <div class="flex flex-col h-full">
+    <div class="bg-indigo-600 text-white p-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <span class="text-3xl">{{ selectedDate() | date : 'MMMM' }}</span>
+        </div>
+        <div class="flex items-center gap-4">
+
+          <div class="flex gap-1">
+            <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
+                    (click)="subtractWeek()">
+                <span class="material-symbols-outlined">
+                  <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
+                </span>
+            </button>
+            <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
+                    (click)="selectedDate.set(currentDate())">
+              <span class="material-symbols-outlined">Today</span>
+            </button>
+            <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
+                    (click)="addWeek()">
+                <span class="material-symbols-outlined">
+                  <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-self-center w-1/2 align-center justify-center">
+    <div class="py-2 text-center font-medium">
+      <div  class="grid grid-cols-7">
+      @for (day of datesToShow(); track day) {
+        <div class="p-4 m-2 rounded-full shadow-lg">
+          {{day | date : 'd' }}
+        </div>
+      }
+      </div>
+    </div>
+  </div>
+</div>
