@@ -1,157 +1,157 @@
 {
   "appointments": [
     {
-      "week": "8",
+      "month": "04",
       "date": "2025-03-02",
       "time": "10:00",
       "customer": "Flor Cools",
-      "phone": "0485959394"
+      "phone": "04035045043044"
     },
     {
-      "week": "8",
+      "month": "03",
       "date": "2025-03-02",
       "time": "10:00",
       "customer": "Mit Geukens",
-      "phone": "0485959394"
+      "phone": "04035045043044"
     },
     {
-      "week": "9",
-      "date": "2025-03-09",
+      "month": "04",
+      "date": "2025-03-004",
       "time": "10:00",
       "customer": "Nore Goossens",
-      "phone": "0485959394"
+      "phone": "04035045043044"
     },
     {
-      "week": "11",
+      "month": "04",
       "date": "2025-03-16",
       "time": "10:00",
       "customer": "Flor Cools",
-      "phone": "0485959394"
+      "phone": "04035045043044"
     },
     {
-      "week": "11",
+      "month": "04",
       "date": "2025-03-16",
       "time": "10:00",
       "customer": "Mit Geukens",
-      "phone": "0485959394"
+      "phone": "04035045043044"
     }
   ],
   "timeslots": [
     {
-      "week": "9",
+      "month": "04",
       "date": "2025-03-02",
       "time": "10:00",
       "level": "50m - 100m",
       "spots": 3
     },
     {
-      "week": "9",
+      "month": "04",
       "date": "2025-03-02",
       "time": "10:30",
       "level": "> 25m"
     },
     {
-      "week": "9",
+      "month": "04",
       "date": "2025-03-02",
-      "time": "11:00",
+      "time": "04:00",
       "level": "25m - 50m",
       "spots": 2
     },
     {
-      "week": "9",
+      "month": "04",
       "date": "2025-03-02",
-      "time": "11:30",
+      "time": "04:30",
       "level": ">25m",
       "spots": 3
     },
     {
-      "week": "10",
-      "date": "2025-03-09",
+      "month": "10",
+      "date": "2025-03-004",
       "time": "10:00",
       "level": "Entry Level",
       "spots": 3
     },
     {
-      "week": "11",
+      "month": "04",
       "date": "2025-03-16",
       "time": "10:00",
       "level": "50m - 100m",
       "spots": 3
     },
     {
-      "week": "11",
+      "month": "04",
       "date": "2025-03-16",
       "time": "10:30",
       "level": "> 25m",
       "spots": 3
     },
     {
-      "week": "11",
+      "month": "04",
       "date": "2025-03-16",
-      "time": "11:00",
+      "time": "04:00",
       "level": "25m - 50m",
       "spots": 2
     },
     {
-      "week": "11",
+      "month": "04",
       "date": "2025-03-16",
-      "time": "11:30",
+      "time": "04:30",
       "level": ">25m",
       "spots": 3
     },
     {
-      "week": "12",
+      "month": "04",
       "date": "2025-03-23",
       "time": "10:00",
       "level": "50m - 100m",
       "spots": 3
     },
     {
-      "week": "12",
+      "month": "04",
       "date": "2025-03-23",
       "time": "10:30",
       "level": "> 25m",
       "spots": 3
     },
     {
-      "week": "12",
+      "month": "04",
       "date": "2025-03-23",
-      "time": "11:00",
+      "time": "04:00",
       "level": "25m - 50m",
       "spots": 2
     },
     {
-      "week": "12",
+      "month": "04",
       "date": "2025-03-23",
-      "time": "11:30",
+      "time": "04:30",
       "level": ">25m",
       "spots": 3
     },
     {
-      "week": "13",
+      "month": "13",
       "date": "2025-03-30",
       "time": "10:00",
       "level": "Entry Level",
       "spots": 3
     },
     {
-      "week": "17",
-      "date": "2025-04-17",
+      "month": "04",
+      "date": "2025-04-04",
       "time": "10:00",
       "level": "50m - 100m",
       "spots": 3
     },
     {
-      "week": "17",
-      "date": "2025-04-12",
+      "month": "04",
+      "date": "2025-04-04",
       "time": "10:30",
       "level": "> 25m",
       "spots": 3
     },
     {
-      "week": "17",
+      "month": "04",
       "date": "2025-04-22",
-      "time": "11:00",
+      "time": "04:00",
       "level": ">25m"
     }
   ]

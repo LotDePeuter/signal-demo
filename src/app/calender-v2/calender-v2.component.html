@@ -31,12 +31,17 @@
   </div>
   <div class="flex justify-self-center w-1/2 align-center justify-center">
     <div class="py-2 text-center font-medium">
-      <div  class="grid grid-cols-7">
-      @for (day of datesToShow(); track day) {
-        <div class="p-4 m-2 rounded-full shadow-lg">
-          {{day | date : 'd' }}
-        </div>
-      }
+      <div class="grid grid-cols-7">
+        @for (date of datesToShow().slice(0, 7); track date) {
+          <div>{{ date | date : 'EEE' }}</div>
+        }
+        @for (day of datesToShow(); track day) {
+          <div class="p-4 m-2 rounded-full shadow-lg flex items-center  flex-col">
+            <span> {{ day | date : 'd' }}</span>
+            @if (getTimeSlotByDate(day| date: 'yyyy-MM-dd')) {
+              <div class="rounded-full h-2 w-2 bg-indigo-500"></div>
+            } </div>
+        }
       </div>
     </div>
   </div>

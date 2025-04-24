@@ -1,4 +1,4 @@
-import {Component, computed, inject, OnInit, resource, ResourceRef, signal} from '@angular/core';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import {DatePipe, JsonPipe} from '@angular/common';
 import {AppointmentRequest} from '../shared/interfaces/appointment-request.interface';
 import moment from 'moment';
@@ -6,7 +6,6 @@ import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {Appointment} from '../shared/interfaces/appointment.interface';
 import {Timeslot} from '../shared/interfaces/timeslot.interface';
 import {HttpClient} from '@angular/common/http';
-import {lastValueFrom} from 'rxjs';
 import {rxResource} from '@angular/core/rxjs-interop';
 import {AppointmentComponent} from '../appointment/appointment.component';
 
@@ -16,7 +15,6 @@ import {AppointmentComponent} from '../appointment/appointment.component';
   imports: [
     DatePipe,
     FaIconComponent,
-    JsonPipe,
     AppointmentComponent
   ],
   templateUrl: './calender.component.html'

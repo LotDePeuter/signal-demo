@@ -1,10 +1,10 @@
 import {Component, computed, inject, OnInit, resource, ResourceRef, signal} from '@angular/core';
-import {DatePipe, JsonPipe} from '@angular/common';
-import {AppointmentRequest} from '../shared/interfaces/appointment-request.interface';
+import {DatePipe, JsonPipe, NgClass} from '@angular/common';
+import {AppointmentRequest, AppointmentRequestV2} from '../shared/interfaces/appointment-request.interface';
 import moment from 'moment';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {Appointment} from '../shared/interfaces/appointment.interface';
-import {Timeslot} from '../shared/interfaces/timeslot.interface';
+import {getColorByLevel, Timeslot} from '../shared/interfaces/timeslot.interface';
 import {HttpClient} from '@angular/common/http';
 import {lastValueFrom} from 'rxjs';
 import {rxResource} from '@angular/core/rxjs-interop';
@@ -17,7 +17,8 @@ import {AppointmentComponent} from '../appointment/appointment.component';
     DatePipe,
     FaIconComponent,
     JsonPipe,
-    AppointmentComponent
+    AppointmentComponent,
+    NgClass
   ],
   templateUrl: './calender-v2.component.html'
 })
@@ -26,6 +27,7 @@ export class CalenderV2Component implements OnInit {
     return Array.from({length: moment(this.selectedDate()).daysInMonth()}, (_, day) => {
       return moment(this.selectedDate()).startOf('month').add(day, 'days').toDate();
     });
+
   });
 
   readonly currentDate = signal(new Date());
@@ -37,16 +39,18 @@ export class CalenderV2Component implements OnInit {
   readonly #httpClient = inject(HttpClient);
 
   readonly madeAppointments = rxResource({
-    request: (): AppointmentRequest => ({currentDate: this.selectedDate().toLocaleDateString()}),
+    request: (): AppointmentRequestV2=> ({currentDate: this.selectedDate()}),
     loader: ({request}) => {
-      return this.#httpClient.get<Appointment[]>(`http://localhost:3000/appointments?week=${moment(request.currentDate).week()}`)
+      console.log('request', this.selectedDate().getMonth())
+      console.log('request moment', moment(request.currentDate).format('MM'))
+      return this.#httpClient.get<Appointment[]>(`http://localhost:3000/appointments?month=${moment(request.currentDate).format('MM')}`)
     },
   });
 
   readonly  slots = rxResource({
-    request: (): AppointmentRequest => ({currentDate: this.selectedDate().toLocaleDateString()}),
+    request: (): AppointmentRequestV2 => ({currentDate: this.selectedDate()}),
     loader: ({request}) => {
-      return this.#httpClient.get<Timeslot[]>(`http://localhost:3000/timeslots?week=${moment(request.currentDate).week()}`)
+      return this.#httpClient.get<Timeslot[]>(`http://localhost:3000/timeslots?month=${moment(request.currentDate).format('MM')}`)
     },
   });
 
@@ -70,5 +74,18 @@ export class CalenderV2Component implements OnInit {
     return this.timeslots()?.find((slot: Timeslot) => {
       return slot.date === date && slot.time === hour;
     })
+  }
+
+  getTimeSlotByDate(date: string): Timeslot {
+    console.log(this.timeslots()?.find((slot: Timeslot) => {
+      return slot.date === date;
+    }))
+    return this.timeslots()?.find((slot: Timeslot) => {
+      return slot.date === date;
+    })
+  }
+
+  getColor(level: string): string {
+    return getColorByLevel(level);
   }
 }

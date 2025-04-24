@@ -3,6 +3,10 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,ts}'],
+  safelist: [
+    { pattern: /bg-(red)-(500)/ },
+    { pattern: /bg-(red|indigo)/ },
+  ],
   theme: {
     extend: {
       ...defaultTheme,
@@ -10,6 +14,7 @@ module.exports = {
         height: 'height',
         'font-weight': 'font-weight',
       },
+
       width: {
         fixed: '1151px',
         '5/100': '5%',
