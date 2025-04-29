@@ -1,20 +1,21 @@
 <div
-  class="  border-top-2 border-t-1 border-indigo-500 w-full">
+  class="border-top-2 border-t-1 border-indigo-500 w-full"
+>
   <div class=" my-10 w-2/3 justify-self-center flex  flex-col gap-4 ">
     <h2 class="text-xl font-bold">Available slots: <span
-      class="text-indigo-300">{{ date()}}</span></h2>
+      class="text-indigo-300">{{ date() | date: 'dd/MM'}}</span></h2>
     <div class="grid grid-cols-3 gap-4">
-      @for (slot of timeslots(); track slot) {
-        <div class="px-6 py-2 rounded-lg shadow-md  shadow-indigo-500/10 flex flex-col">
+      @for (slot of daySlots(); track slot) {
+        <div class="px-6 py-2 rounded-lg shadow-md  shadow-indigo-500/10 flex flex-col" [ngClass]="{'bg-indigo-100/50': partipantsInSlot(slot).length.toString() === slot.spots?.toString()}">
           <div class="flex justify-between gap-6">
             <p class="text-lg text-indigo-500 font-semibold">{{ slot.time }}</p>
-            <p>{{ reservedSpots() }}/{{ slot.spots }}</p>
+            <p>{{ spotsInSlot(slot)?.length }}/{{ slot.spots }}</p>
           </div>
           <p><span class="text-indigo-400">Level: </span>{{ slot.level }}</p>
-          @if (participants().length > 0) {
+          @if (partipantsInSlot(slot).length > 0) {
             <ul class="list-disc list-inside">
               <span class="text-indigo-400">Participants:</span>
-              @for (participant of participants(); track participants) {
+              @for (participant of partipantsInSlot(slot); track participant) {
                 <li>{{ participant }}</li>
               }
             </ul>

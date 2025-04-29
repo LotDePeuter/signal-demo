@@ -36,7 +36,8 @@
           <div>{{ date | date : 'EEE' }}</div>
         }
         @for (day of datesToShow(); track day) {
-          <div class="p-4 m-2 rounded-full shadow-lg flex items-center  flex-col cursor-pointer"  (click)="updateSelectedDate(day)">
+          <div class="p-4 m-2 rounded-full shadow-lg flex items-center  flex-col cursor-pointer"
+               (click)="updateSelectedDate(day)">
             <span> {{ day | date : 'd' }}</span>
             @if (getTimeSlotByDate(day| date: 'yyyy-MM-dd')) {
               <div class="rounded-full h-2 w-2 bg-indigo-500"></div>
@@ -45,9 +46,7 @@
       </div>
     </div>
   </div>
-  @if (timeslots()?.length> 0) {
-    <app-stepper
-      [steps]="steps">
-    </app-stepper>
+  @if (storeSlots()?.length > 0) {
+    <app-slots-overview/>
   }
 </div>

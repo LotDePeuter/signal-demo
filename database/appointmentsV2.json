@@ -2,7 +2,7 @@
   "appointments": [
     {
       "month": "04",
-      "date": "2025-03-02",
+      "date": "2025-04-02",
       "time": "10:00",
       "customer": "Flor Cools",
       "phone": "04035045043044"
@@ -16,23 +16,58 @@
     },
     {
       "month": "04",
-      "date": "2025-03-004",
+      "date": "2025-04-04",
       "time": "10:00",
       "customer": "Nore Goossens",
       "phone": "04035045043044"
     },
     {
       "month": "04",
-      "date": "2025-03-16",
+      "date": "2025-04-16",
       "time": "10:00",
       "customer": "Flor Cools",
       "phone": "04035045043044"
     },
     {
       "month": "04",
-      "date": "2025-03-16",
+      "date": "2025-04-16",
       "time": "10:00",
       "customer": "Mit Geukens",
+      "phone": "04035045043044"
+    },
+    {
+      "month": "04",
+      "date": "2025-04-27",
+      "time": "10:30",
+      "customer": "Mit Geukens",
+      "phone": "04035045043044"
+    },
+    {
+      "month": "04",
+      "date": "2025-04-27",
+      "time": "10:30",
+      "customer": "Will Van den Eynde",
+      "phone": "04035045043044"
+    },
+    {
+      "month": "04",
+      "date": "2025-04-27",
+      "time": "10:30",
+      "customer": "Jul Marien",
+      "phone": "04035045043044"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-02",
+      "time": "18:00",
+      "customer": "Sovannarith Chaad",
+      "phone": "032922928393"
+    },
+    {
+      "month": "04",
+      "date": "2025-04-27",
+      "time": "11:00",
+      "customer": "Annabel Aerts",
       "phone": "04035045043044"
     }
   ],
@@ -151,32 +186,51 @@
     {
       "month": "04",
       "date": "2025-04-22",
-      "time": "04:00",
-      "level": ">25m"
+      "time": "18:00",
+      "level": ">25m",
+      "spots": 3
     },
     {
       "month": "05",
       "date": "2025-05-02",
       "time": "18:00",
-      "level": "< 25m"
+      "level": "< 25m",
+      "spots": 3
     },
     {
       "month": "05",
       "date": "2025-05-02",
       "time": "18:30",
-      "level": "< 25m"
+      "level": "< 25m",
+      "spots": 3
     },
     {
       "month": "05",
       "date": "2025-05-02",
       "time": "19:00",
-      "level": "50m - 100m"
+      "level": "50m - 100m",
+      "spots": 3
     },
     {
       "month": "05",
       "date": "2025-05-02",
       "time": "19:30",
-      "level": "100m - 200m"
+      "level": "100m - 200m",
+      "spots": 3
+    },
+    {
+      "month": "04",
+      "date": "2025-04-27",
+      "time": "10:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "04",
+      "date": "2025-04-27",
+      "time": "11:00",
+      "level": "25m - 50m",
+      "spots": 2
     }
   ]
 }
