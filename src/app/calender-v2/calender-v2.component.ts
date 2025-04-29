@@ -12,6 +12,7 @@ import {AppointmentComponent} from '../appointment/appointment.component';
 import {StepperComponent} from '../shared/components/stepper/stepper.component';
 import {CalenderStepsFactory} from './calender-steps-factory';
 import {StepperStore} from '../shared/components/stepper/store/stepper.store';
+import {CalenderStore} from './store/calender.store';
 
 @Component({
   selector: 'app-calender-v2',
@@ -24,9 +25,14 @@ import {StepperStore} from '../shared/components/stepper/store/stepper.store';
     NgClass,
     StepperComponent
   ],
+  providers: [StepperStore],
   templateUrl: './calender-v2.component.html'
 })
 export class CalenderV2Component implements OnInit {
+  readonly #httpClient = inject(HttpClient);
+  readonly #stepperStore = inject(StepperStore);
+  readonly #calenderStore = inject(CalenderStore);
+
   steps = CalenderStepsFactory.steps();
   readonly datesToShow = computed(() => {
     return Array.from({length: moment(this.selectedDate()).daysInMonth()}, (_, day) => {
@@ -36,24 +42,19 @@ export class CalenderV2Component implements OnInit {
   });
 
   readonly currentDate = signal(new Date());
-  readonly selectedDate = signal(new Date());
+  readonly selectedDate = this.#calenderStore.date;
   readonly appointments = computed(() => this.madeAppointments.value());
   readonly timeslots = computed(() => this.slots.value());
 
 
-  readonly #httpClient = inject(HttpClient);
-  readonly #stepperStore = inject(StepperStore);
-
   readonly madeAppointments = rxResource({
-    request: (): AppointmentRequestV2=> ({currentDate: this.selectedDate()}),
+    request: (): AppointmentRequestV2 => ({currentDate: this.selectedDate()}),
     loader: ({request}) => {
-      console.log('request', this.selectedDate().getMonth())
-      console.log('request moment', moment(request.currentDate).format('MM'))
       return this.#httpClient.get<Appointment[]>(`http://localhost:3000/appointments?month=${moment(request.currentDate).format('MM')}`)
     },
   });
 
-  readonly  slots = rxResource({
+  readonly slots = rxResource({
     request: (): AppointmentRequestV2 => ({currentDate: this.selectedDate()}),
     loader: ({request}) => {
       return this.#httpClient.get<Timeslot[]>(`http://localhost:3000/timeslots?month=${moment(request.currentDate).format('MM')}`)
@@ -70,11 +71,14 @@ export class CalenderV2Component implements OnInit {
   }
 
   addWeek() {
-    this.selectedDate.set(moment(this.selectedDate()).add(1, 'week').toDate());
+    // this.selectedDate.set(moment(this.selectedDate()).add(1, 'week').toDate());
+    this.#calenderStore.setDate(moment(this.selectedDate()).add(1, 'week').toDate());
   }
 
   subtractWeek() {
-    this.selectedDate.set(moment(this.selectedDate()).subtract(1, 'week').toDate());
+    // this.selectedDate.set(moment(this.selectedDate()).subtract(1, 'week').toDate());
+
+    this.#calenderStore.setDate(moment(this.selectedDate()).subtract(1, 'week').toDate());
   }
 
   getTimeSlot(date: string, hour: string): Timeslot {
@@ -84,15 +88,13 @@ export class CalenderV2Component implements OnInit {
   }
 
   getTimeSlotByDate(date: string): Timeslot {
-    console.log(this.timeslots()?.find((slot: Timeslot) => {
-      return slot.date === date;
-    }))
     return this.timeslots()?.find((slot: Timeslot) => {
       return slot.date === date;
     })
   }
 
-  getColor(level: string): string {
-    return getColorByLevel(level);
+  updateSelectedDate(date: Date) {
+    console.log('updateSelectedDate', date, this.selectedDate(), this.#calenderStore.date())
+    this.#calenderStore.setDate(date)
   }
 }

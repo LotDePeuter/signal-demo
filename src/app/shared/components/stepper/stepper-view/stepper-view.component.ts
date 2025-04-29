@@ -26,6 +26,7 @@ export class StepperViewComponent {
     .subscribe({
       next: () => {
         this.viewContainerRef().clear();
+        console.log('stepper-view', this.#store.current().step.component);
         const componentRef = this.viewContainerRef().createComponent(this.#store.current().step.component);
         componentRef.changeDetectorRef.markForCheck();
         this.#store.setComponentRef(componentRef);

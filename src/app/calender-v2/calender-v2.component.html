@@ -15,7 +15,7 @@
                 </span>
             </button>
             <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
-                    (click)="selectedDate.set(currentDate())">
+                    (click)="updateSelectedDate(currentDate())">
               <span class="material-symbols-outlined">Today</span>
             </button>
             <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
@@ -36,7 +36,7 @@
           <div>{{ date | date : 'EEE' }}</div>
         }
         @for (day of datesToShow(); track day) {
-          <div class="p-4 m-2 rounded-full shadow-lg flex items-center  flex-col">
+          <div class="p-4 m-2 rounded-full shadow-lg flex items-center  flex-col cursor-pointer"  (click)="updateSelectedDate(day)">
             <span> {{ day | date : 'd' }}</span>
             @if (getTimeSlotByDate(day| date: 'yyyy-MM-dd')) {
               <div class="rounded-full h-2 w-2 bg-indigo-500"></div>
@@ -45,9 +45,9 @@
       </div>
     </div>
   </div>
-  @if(timeslots().length>0){
+  @if (timeslots()?.length> 0) {
     <app-stepper
-    [steps]="steps">
+      [steps]="steps">
     </app-stepper>
   }
 </div>

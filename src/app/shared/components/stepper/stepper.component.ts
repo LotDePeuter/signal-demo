@@ -10,6 +10,7 @@ import {Step} from './interfaces/step.interface';
   templateUrl: 'stepper.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [StepperViewComponent, StepperNavigationComponent],
+  providers: [StepperStore],
 })
 export class StepperComponent implements OnInit {
   steps = input.required<Step[]>();
@@ -19,5 +20,6 @@ export class StepperComponent implements OnInit {
 
   ngOnInit(): void {
     this.#store.setSteps(this.steps());
+    console.log('steps', this.steps());
   }
 }

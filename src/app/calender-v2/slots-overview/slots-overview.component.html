@@ -1,1 +1,26 @@
-<p>slots-overview works!</p>
+<div
+  class="  border-top-2 border-t-1 border-indigo-500 w-full">
+  <div class=" my-10 w-2/3 justify-self-center flex  flex-col gap-4 ">
+    <h2 class="text-xl font-bold">Available slots: <span
+      class="text-indigo-300">{{ date()}}</span></h2>
+    <div class="grid grid-cols-3 gap-4">
+      @for (slot of timeslots(); track slot) {
+        <div class="px-6 py-2 rounded-lg shadow-md  shadow-indigo-500/10 flex flex-col">
+          <div class="flex justify-between gap-6">
+            <p class="text-lg text-indigo-500 font-semibold">{{ slot.time }}</p>
+            <p>{{ reservedSpots() }}/{{ slot.spots }}</p>
+          </div>
+          <p><span class="text-indigo-400">Level: </span>{{ slot.level }}</p>
+          @if (participants().length > 0) {
+            <ul class="list-disc list-inside">
+              <span class="text-indigo-400">Participants:</span>
+              @for (participant of participants(); track participants) {
+                <li>{{ participant }}</li>
+              }
+            </ul>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>
