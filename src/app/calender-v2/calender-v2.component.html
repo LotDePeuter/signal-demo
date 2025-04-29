@@ -45,4 +45,9 @@
       </div>
     </div>
   </div>
+  @if(timeslots().length>0){
+    <app-stepper
+    [steps]="steps">
+    </app-stepper>
+  }
 </div>

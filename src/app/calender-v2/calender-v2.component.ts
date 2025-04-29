@@ -9,6 +9,9 @@ import {HttpClient} from '@angular/common/http';
 import {lastValueFrom} from 'rxjs';
 import {rxResource} from '@angular/core/rxjs-interop';
 import {AppointmentComponent} from '../appointment/appointment.component';
+import {StepperComponent} from '../shared/components/stepper/stepper.component';
+import {CalenderStepsFactory} from './calender-steps-factory';
+import {StepperStore} from '../shared/components/stepper/store/stepper.store';
 
 @Component({
   selector: 'app-calender-v2',
@@ -18,11 +21,13 @@ import {AppointmentComponent} from '../appointment/appointment.component';
     FaIconComponent,
     JsonPipe,
     AppointmentComponent,
-    NgClass
+    NgClass,
+    StepperComponent
   ],
   templateUrl: './calender-v2.component.html'
 })
 export class CalenderV2Component implements OnInit {
+  steps = CalenderStepsFactory.steps();
   readonly datesToShow = computed(() => {
     return Array.from({length: moment(this.selectedDate()).daysInMonth()}, (_, day) => {
       return moment(this.selectedDate()).startOf('month').add(day, 'days').toDate();
@@ -37,6 +42,7 @@ export class CalenderV2Component implements OnInit {
 
 
   readonly #httpClient = inject(HttpClient);
+  readonly #stepperStore = inject(StepperStore);
 
   readonly madeAppointments = rxResource({
     request: (): AppointmentRequestV2=> ({currentDate: this.selectedDate()}),
@@ -55,6 +61,7 @@ export class CalenderV2Component implements OnInit {
   });
 
   ngOnInit() {
+    this.#stepperStore.setSteps(this.steps);
     moment.updateLocale('en', {
       week: {
         dow: 1,
