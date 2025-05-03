@@ -7,7 +7,7 @@ import {Appointment} from '../shared/interfaces/appointment.interface';
 import {Timeslot} from '../shared/interfaces/timeslot.interface';
 import {HttpClient} from '@angular/common/http';
 import {rxResource} from '@angular/core/rxjs-interop';
-import {AppointmentComponent} from '../appointment/appointment.component';
+import {AppointmentComponent} from './appointment/appointment.component';
 
 @Component({
   selector: 'app-calender',
