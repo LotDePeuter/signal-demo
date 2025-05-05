@@ -1,12 +1,16 @@
 import {Routes} from '@angular/router';
 import {CalenderComponent} from './calender/calender.component';
-import {CalenderV2Component} from './calender-v2/calender-v2.component';
+import {BasicComponent} from './demo-basic-signal/basic-signals.component';
+import {SwimCalenderComponent} from './demo-swim-calender/swim-calender.component';
 
 export const routes: Routes = [
   {
-    path: 'v2', component: CalenderV2Component
+    path: 'old', component: CalenderComponent
   },
   {
-    path: '**', component: CalenderComponent
+    path: 'demo', component: BasicComponent
+  },
+  {
+    path: '**', component: SwimCalenderComponent
   }
 ];
