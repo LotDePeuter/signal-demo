@@ -1,8 +1,11 @@
 import {Component, computed, effect, input, linkedSignal, output, signal} from '@angular/core';
+import {NameComponentComponent} from './name-component/name-component.component';
 
 @Component({
   selector: 'app-basic-signal',
-  imports: [],
+  imports: [
+    NameComponentComponent
+  ],
   standalone: true,
   template: `
     <button (click)="add()" type="button"
@@ -17,12 +20,16 @@ import {Component, computed, effect, input, linkedSignal, output, signal} from '
             class="text-white bg-emerald-700 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">
       Empty Q
     </button>
+
+    <app-name-component [(nameModel)]="nameModel" ></app-name-component>
+
     <div class="flex flex-col">
       <span class="font-bold">Angular 16:</span>
       <div class="flex flex-col">
         <p>Price: {{ price() }}</p>
         <p> Quantity: {{ quantity() }}</p>
         <p>Total Cost: {{ totalCost() }}</p>
+        <p>Name: {{nameModel()}}</p>
       </div>
     </div>
   `
@@ -56,6 +63,7 @@ export class BasicComponent {
   //Angular 17-18
 
   name = input<string>();
+  nameModel= signal<string>('');
   height = input.required<number>();
 
   nameChange = output<string>();
