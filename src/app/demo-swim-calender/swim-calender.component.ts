@@ -27,7 +27,7 @@ export class SwimCalenderComponent implements OnInit {
   readonly currentDate = signal(new Date());
   readonly timeslots = computed(() => this.slots.value());
   readonly selectedMonth = this.#calenderStore.month
-  readonly storeSlots = this.#calenderStore.timeslots;
+  readonly daySlots = this.#calenderStore.daySlots;
 
   readonly datesToShow = computed(() => {
     return Array.from({length: moment(this.selectedMonth()).daysInMonth()}, (_, day) => {
