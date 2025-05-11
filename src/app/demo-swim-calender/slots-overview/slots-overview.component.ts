@@ -14,14 +14,11 @@ import {DatePipe, NgClass} from '@angular/common';
   templateUrl: './slots-overview.component.html'
 })
 export class SlotsOverviewComponent {
-  isValid = signal(true);
   #store = inject(CalenderStore);
 
   date = this.#store.date;
   daySlots= this.#store.daySlots;
   reservedSpots = this.#store.reservedSpots;
-
-  readonly participants = computed(() => this.#store.participants());
 
   spotsInSlot(slot: Timeslot) : Appointment[]{
    return  this.reservedSpots()?.filter(spot => {
@@ -30,6 +27,6 @@ export class SlotsOverviewComponent {
   }
 
   partipantsInSlot(slot: Timeslot) : string[]{
-    return this.spotsInSlot(slot).map(spot => spot.customer);
+    return this.spotsInSlot(slot)?.map(spot => spot.customer);
   }
 }
