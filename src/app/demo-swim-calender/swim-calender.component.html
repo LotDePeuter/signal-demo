@@ -1,15 +1,13 @@
 <div class="w-full bg-white shadow-lg overflow-hidden font-sans">
   <div class="flex flex-col h-full">
-    <div class="bg-indigo-600 text-white p-6">
-      <div class="flex justify-between items-center">
+    <div class="bg-indigo-600 text-white p-6 flex justify-between items-center">
         <div class="flex items-center gap-4">
-          <span class="text-3xl">{{ selectedDate() | date : 'MMMM' }}</span>
+          <span class="text-3xl">{{ selectedMonth() | date : 'MMMM' }}</span>
         </div>
         <div class="flex items-center gap-4">
-
           <div class="flex gap-1">
             <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
-                    (click)="subtractWeek()">
+                    (click)="subtractMonth()">
                 <span class="material-symbols-outlined">
                   <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
                 </span>
@@ -19,14 +17,13 @@
               <span class="material-symbols-outlined">Today</span>
             </button>
             <button class="hover:bg-indigo-500 p-2 rounded-full transition-colors duration-200"
-                    (click)="addWeek()">
+                    (click)="addMonth()">
                 <span class="material-symbols-outlined">
                   <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
                 </span>
             </button>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <div class="flex justify-self-center w-1/2 align-center justify-center">

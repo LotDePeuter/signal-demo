@@ -24,21 +24,20 @@ export class SwimCalenderComponent implements OnInit {
   readonly #httpClient = inject(HttpClient);
   readonly #calenderStore = inject(CalenderStore);
 
+  readonly currentDate = signal(new Date());
+  readonly timeslots = computed(() => this.slots.value());
+  readonly selectedMonth = this.#calenderStore.month
+  readonly storeSlots = this.#calenderStore.timeslots;
+
   readonly datesToShow = computed(() => {
-    return Array.from({length: moment(this.selectedDate()).daysInMonth()}, (_, day) => {
-      return moment(this.selectedDate()).startOf('month').add(day, 'days').toDate();
+    return Array.from({length: moment(this.selectedMonth()).daysInMonth()}, (_, day) => {
+      return moment(this.selectedMonth()).startOf('month').add(day, 'days').toDate();
     });
 
   });
 
-  readonly currentDate = signal(new Date());
-  readonly selectedDate = this.#calenderStore.date;
-  readonly timeslots = computed(() => this.slots.value());
-  readonly storeSlots = this.#calenderStore.timeslots;
-
-
   readonly slots = rxResource({
-    request: (): AppointmentRequestV2 => ({currentDate: this.selectedDate()}),
+    request: (): AppointmentRequestV2 => ({currentDate: this.selectedMonth()}),
     loader: ({request}) => {
       return this.#httpClient.get<Timeslot[]>(`http://localhost:3000/timeslots?month=${moment(request.currentDate).format('MM')}`)
     },
@@ -52,12 +51,12 @@ export class SwimCalenderComponent implements OnInit {
     });
   }
 
-  addWeek() {
-    this.#calenderStore.setDate(moment(this.selectedDate()).add(1, 'week').toDate());
+  addMonth() {
+    this.#calenderStore.setMonth(moment(this.selectedMonth()).add(1, 'month').toDate());
   }
 
-  subtractWeek() {
-    this.#calenderStore.setDate(moment(this.selectedDate()).subtract(1, 'week').toDate());
+  subtractMonth() {
+    this.#calenderStore.setMonth(moment(this.selectedMonth()).subtract(1, 'month').toDate());
   }
 
   getTimeSlotByDate(date: string): Timeslot {
@@ -68,5 +67,6 @@ export class SwimCalenderComponent implements OnInit {
 
   updateSelectedDate(date: Date) {
     this.#calenderStore.setDate(date)
+    this.#calenderStore.setMonth(date)
   }
 }

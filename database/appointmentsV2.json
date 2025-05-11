@@ -69,6 +69,216 @@
       "time": "11:00",
       "customer": "Annabel Aerts",
       "phone": "04035045043044"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "10:30",
+      "customer": "Liam Verhoeven",
+      "phone": "04123456789"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "10:30",
+      "customer": "Emma Peeters",
+      "phone": "04987654321"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "10:30",
+      "customer": "Noah Janssens",
+      "phone": "04876543210"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:00",
+      "customer": "Sophie Maes",
+      "phone": "04765432109"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:00",
+      "customer": "Lucas Willems",
+      "phone": "04654321098"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:00",
+      "customer": "Olivia Jacobs",
+      "phone": "04543210987"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:30",
+      "customer": "Milan De Smet",
+      "phone": "04432109876"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:30",
+      "customer": "Elise Van den Broeck",
+      "phone": "04321098765"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "10:30",
+      "customer": "Arthur Claes",
+      "phone": "04210987654"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "10:30",
+      "customer": "Charlotte Hendrickx",
+      "phone": "04109876543"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "10:30",
+      "customer": "Victor Goossens",
+      "phone": "04098765432"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "11:00",
+      "customer": "Ella De Vos",
+      "phone": "04987654321"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "11:00",
+      "customer": "Finn Mertens",
+      "phone": "04876543210"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "11:30",
+      "customer": "Marie Van den Eynde",
+      "phone": "04543210987"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "10:30",
+      "customer": "Thomas Peeters",
+      "phone": "04432109876"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "10:30",
+      "customer": "Laura Janssens",
+      "phone": "04321098765"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "10:30",
+      "customer": "Simon Maes",
+      "phone": "04210987654"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:00",
+      "customer": "Eva Willems",
+      "phone": "04109876543"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:00",
+      "customer": "Nathan Jacobs",
+      "phone": "04098765432"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:00",
+      "customer": "Sofie De Smet",
+      "phone": "04987654321"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:30",
+      "customer": "Max Van den Broeck",
+      "phone": "04876543210"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:30",
+      "customer": "Emma Claes",
+      "phone": "04765432109"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "10:30",
+      "customer": "Lucas Hendrickx",
+      "phone": "04654321098"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "10:30",
+      "customer": "Olivia Goossens",
+      "phone": "04543210987"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "10:30",
+      "customer": "Milan De Vos",
+      "phone": "04432109876"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:00",
+      "customer": "Elise Mertens",
+      "phone": "04321098765"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:00",
+      "customer": "Arthur Van Dam",
+      "phone": "04210987654"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:00",
+      "customer": "Charlotte De Ridder",
+      "phone": "04109876543"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:30",
+      "customer": "Victor Van den Eynde",
+      "phone": "04098765432"
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:30",
+      "customer": "Ella Peeters",
+      "phone": "04987654321"
     }
   ],
   "timeslots": [
@@ -230,6 +440,223 @@
       "date": "2025-04-27",
       "time": "11:00",
       "level": "25m - 50m",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-06",
+      "time": "19:00",
+      "level": "50m-100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-06",
+      "time": "18:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-06",
+      "time": "19:00",
+      "level": "50m - 100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-13",
+      "time": "18:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-20",
+      "time": "18:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-20",
+      "time": "19:00",
+      "level": "50m - 100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-27",
+      "time": "18:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-09",
+      "time": "18:00",
+      "level": "> 25m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-09",
+      "time": "18:30",
+      "level": "Entry Level",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-09",
+      "time": "19:00",
+      "level": "50m - 100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-16",
+      "time": "18:00",
+      "level": "> 25m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-16",
+      "time": "18:30",
+      "level": "Entry Level",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-16",
+      "time": "19:00",
+      "level": "50m - 100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-23",
+      "time": "18:00",
+      "level": "> 25m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-23",
+      "time": "18:30",
+      "level": "Entry Level",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-23",
+      "time": "19:00",
+      "level": "50m - 100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-30",
+      "time": "18:00",
+      "level": "> 25m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-30",
+      "time": "18:30",
+      "level": "Entry Level",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-30",
+      "time": "19:00",
+      "level": "50m - 100m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "10:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:00",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-04",
+      "time": "11:30",
+      "level": "< 25m",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "10:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "11:00",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-11",
+      "time": "11:30",
+      "level": "< 25m",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "10:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:00",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-18",
+      "time": "11:30",
+      "level": "< 25m",
+      "spots": 2
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "10:30",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:00",
+      "level": "25m - 50m",
+      "spots": 3
+    },
+    {
+      "month": "05",
+      "date": "2025-05-25",
+      "time": "11:30",
+      "level": "< 25m",
       "spots": 2
     }
   ]

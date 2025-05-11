@@ -5,11 +5,13 @@ import {CalenderService} from '../services/calender.service';
 
 type CalenderState = {
   date: Date;
+  month:Date;
   timeSlots: Timeslot[];
 };
 
 const initialState: CalenderState = {
   date: new Date(),
+  month:new Date(),
   timeSlots: [],
 };
 
@@ -60,5 +62,8 @@ export const CalenderStore = signalStore(
     setDate(date: Date): void {
       patchState(store, () => ({ date }));
     },
+    setMonth(month:Date):void{
+      patchState(store, () => ({ month }));
+    }
   }))
 );
